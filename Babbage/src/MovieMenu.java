@@ -24,4 +24,26 @@ public class MovieMenu {
     void addMovie(String movie){
         String movieChoice = movie;
     }
+    
+    /** 
+     * Deletes a movie from the database.
+     * @param movie specifies the movie
+     */
+    void deleteMovie(String movie){
+        String movieChoice = movie;
+    }
+    
+    /**
+     * Edits an existing movie entry in the database.
+     * @param movie specifies the movie
+     */
+    void editMovie(String movie){
+        String movieChoice = movie;
+    }
+    /**
+     * Updates database
+     */
+    void update(){
+        
+    }
 }

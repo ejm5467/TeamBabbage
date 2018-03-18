@@ -24,10 +24,17 @@ public class SystemMenu {
     }
     
     /**
-     * Selects the Change Product Menu.
+     * Logs into the system.
      */
-    public void SelectChangeProduct(){
+    void login(){
 
+    }
+    
+    /**
+     * Displays the Manager Menu.
+     */
+    void displayManagerMenu(){
+    
     }
 }
 
