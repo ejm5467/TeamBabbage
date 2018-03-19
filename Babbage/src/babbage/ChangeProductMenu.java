@@ -1,3 +1,5 @@
+package babbage;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -21,7 +23,7 @@ public class ChangeProductMenu {
      * Displays the movie menu.
      * @param movie specifies the movie title.
      */
-    void SelectMovie(String movie){
+    public void SelectMovie(String movie){
         String movieTitle = movie;
     }
     
@@ -29,7 +31,7 @@ public class ChangeProductMenu {
      * Displays the concessions menu.
      * @param concession specifies the concession.
      */
-    void SelectConcession(String concession){
+    public void SelectConcession(String concession){
         String concessionChoice = concession;
     }
 }

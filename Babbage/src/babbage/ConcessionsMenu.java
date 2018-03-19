@@ -1,3 +1,5 @@
+package babbage;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -21,7 +23,7 @@ public class ConcessionsMenu {
      * Adds a concession to the database.
      * @param concession specifies the concession
      */
-    void addConcession(String concession){
+    public void addConcession(String concession){
         String concessionChoice = concession;
     }
     
@@ -29,7 +31,7 @@ public class ConcessionsMenu {
      * Deletes a concession from the database.
      * @param concession specifies the concession
      */
-    void deleteConcession(String concession){
+    public void deleteConcession(String concession){
         String concessionChoice = concession;
     }
     
@@ -37,13 +39,13 @@ public class ConcessionsMenu {
      * Edits an existing concession entry in the database.
      * @param concession specifies the concession
      */
-    void editConcession(String concession){
+    public void editConcession(String concession){
         String concessionChoice = concession;
     }
     /**
      * Updates database
      */
-    void update(){
+    public void update(){
         
     }
 }

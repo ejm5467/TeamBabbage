@@ -1,3 +1,5 @@
+package babbage;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -20,21 +22,21 @@ public class GenerateReportMenu {
     /**
      * Specifies the type of report needed.
      */
-    void setReportParameters(){
+    public void setReportParameters(){
         
     }
     
     /**
      * Generates report.
      */
-    void createReport(){
+    public void createReport(){
         
     }
     
     /**
      * Prints Report
      */
-   void print(){
+   public void print(){
    
    }
 }

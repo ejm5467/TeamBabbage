@@ -1,3 +1,5 @@
+package babbage;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -21,7 +23,7 @@ public class MovieMenu {
      * Adds a movie to the database.
      * @param movie specifies the movie
      */
-    void addMovie(String movie){
+    public void addMovie(String movie){
         String movieChoice = movie;
     }
     
@@ -29,7 +31,7 @@ public class MovieMenu {
      * Deletes a movie from the database.
      * @param movie specifies the movie
      */
-    void deleteMovie(String movie){
+    public void deleteMovie(String movie){
         String movieChoice = movie;
     }
     
@@ -37,13 +39,13 @@ public class MovieMenu {
      * Edits an existing movie entry in the database.
      * @param movie specifies the movie
      */
-    void editMovie(String movie){
+    public void editMovie(String movie){
         String movieChoice = movie;
     }
     /**
      * Updates database
      */
-    void update(){
+    public void update(){
         
     }
 }

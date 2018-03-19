@@ -1,3 +1,5 @@
+package babbage;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -26,14 +28,14 @@ public class SystemMenu {
     /**
      * Logs into the system.
      */
-    void login(){
+    public void login(){
 
     }
     
     /**
      * Displays the Manager Menu.
      */
-    void displayManagerMenu(){
+    public void displayManagerMenu(){
     
     }
 }

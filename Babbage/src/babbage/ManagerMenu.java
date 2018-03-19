@@ -1,3 +1,5 @@
+package babbage;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -20,14 +22,14 @@ public class ManagerMenu {
     /**
      * Displays the Change Product Menu.
      */
-    void displayChangeProductMenu(){
+    public void displayChangeProductMenu(){
         
     }
     
     /**
      * Displays the Generate Report Menu.
      */
-    void displayGenerateReportMenu(){
+    public void displayGenerateReportMenu(){
         
     }
 }
