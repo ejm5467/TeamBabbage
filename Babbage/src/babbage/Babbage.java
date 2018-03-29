@@ -5,17 +5,65 @@
  */
 package babbage;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.Statement;
+
 /**
  *
  * @author Emily
  */
 public class Babbage {
 
-    /**
-     * @param args the command line arguments
-     */
+    static final String DB_URL = 
+            "jdbc:mysql://istdata.bk.psu.edu:3306/ejm5467"; 
+    static final String DB_USER = "ejm5467";           
+    static final String DB_PASSWD = "berks8221";  
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+        Connection connection = null;  
+        Statement statement = null;
+        ResultSet resultSet = null; 
+        
+        try {
+           
+            connection= DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWD);
+            statement=connection.createStatement();
+            resultSet=statement.executeQuery("SELECT * FROM Movies");
+            
+            ResultSetMetaData md = resultSet.getMetaData();
+            System.out.printf("%s\t%s\t\n", 
+                    md.getColumnName(1), 
+                    md.getColumnName(2));
+            
+            while(resultSet.next()){
+                System.out.printf("%d\t%s\n", 
+                        resultSet.getInt(1), 
+                        resultSet.getString(2));
+            }
+            
+            resultSet=statement.executeQuery("SELECT * FROM Users");
+            
+            md = resultSet.getMetaData();
+            System.out.printf("%s\t%s\t\t%s\n", 
+                    md.getColumnName(1), 
+                    md.getColumnName(2), 
+                    md.getColumnName(3));
+            
+            /* Loop through the results and print each record to the screen */
+            while(resultSet.next()){
+                /* Output the row, with formatting... */
+                System.out.printf("%d\t%s\t%s\n", 
+                        resultSet.getInt(1), 
+                        resultSet.getString(2), 
+                        resultSet.getString(3));
+            }
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        
     }
     
 }
