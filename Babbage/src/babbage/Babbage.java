@@ -45,9 +45,9 @@ public class Babbage {
             }
             
             resultSet=statement.executeQuery("SELECT * FROM Users");
-            
+           
             md = resultSet.getMetaData();
-            System.out.printf("%s\t%s\t\t%s\n", 
+            System.out.printf("%s\t%s\t%s\t\n", 
                     md.getColumnName(1), 
                     md.getColumnName(2), 
                     md.getColumnName(3));
@@ -55,10 +55,35 @@ public class Babbage {
             /* Loop through the results and print each record to the screen */
             while(resultSet.next()){
                 /* Output the row, with formatting... */
-                System.out.printf("%d\t%s\t%s\n", 
+                System.out.printf("%d\t%s\t\t%s\n", 
                         resultSet.getInt(1), 
                         resultSet.getString(2), 
                         resultSet.getString(3));
+            }
+            
+            resultSet=statement.executeQuery("SELECT * FROM TicketsSold");
+            
+            md = resultSet.getMetaData();
+            System.out.printf("%s\t%s\t%s\t%s\t%s\t%s\t\n", 
+                    md.getColumnName(1), 
+                    md.getColumnName(2), 
+                    md.getColumnName(3),
+                    md.getColumnName(4),
+                    md.getColumnName(5),
+                    md.getColumnName(6));
+            
+            /* Loop through the results and print each record to the screen */
+            while(resultSet.next()){
+                /* Output the row, with formatting... */
+                System.out.printf("%d\t\t%s\t%d\t\t%tD\t%tl:%tM%tp\t\t%f\t\n", 
+                        resultSet.getInt(1), 
+                        resultSet.getString(2), 
+                        resultSet.getInt(3),
+                        resultSet.getDate(4),
+                        resultSet.getTime(5),
+                        resultSet.getTime(5),
+                        resultSet.getTime(5),
+                        resultSet.getDouble(6));
             }
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
